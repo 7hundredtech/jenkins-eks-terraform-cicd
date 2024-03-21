@@ -39,7 +39,6 @@ pipeline {
         stage('Terraform Script'){
             steps{
                 script{
-                    dir('modules/eks'){
                         sh 'terraform init'
                         sh 'terraform plan'
                         sh 'terraform apply --auto-approve'
@@ -48,7 +47,7 @@ pipeline {
                 }
 
             }
-        }
+        
        
         stage('Deploying  Application') {
             steps{
