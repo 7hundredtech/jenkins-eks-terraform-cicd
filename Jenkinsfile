@@ -14,13 +14,7 @@ pipeline {
                 }
             }
         }
-        stage('Node JS Build') {
-            steps {
-              script{
-                  sh 'npm install .'
-                }
-            }
-        }  
+        
         stage('Build image') {
             steps {
               script{
